@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url(../assets/Rubik-Regular.ttf);
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #ffc700;
+}
+
+.header {
+  height: 60px;
+  background-color: #61000c;
+  text-align: center;
+  padding-top: 17px;
+  color: #ffc700;
+}
+
+.navDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 60px;
+}
+
+#button {
+  background-color: #ffc700;
+  width: 40px;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+#searchBar,
+#inputSelect {
+  width: 40vw;
+  height: 32px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+#searchDiv {
+  display: flex;
+}
+
+#lupa {
+  padding-top: 4px;
+}
+
+#inputSelect {
+  width: 15vw;
+  margin-left: 8px;
+}
+
+@media (max-width: 750px) {
+  .navDiv {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  #searchBar {
+    width: 65vw;
+  }
+
+  #inputSelect {
+    width: 30vw;
+    margin-top: 10px;
+  }
+}
