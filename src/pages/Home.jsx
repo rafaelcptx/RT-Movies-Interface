@@ -12,11 +12,12 @@ const Home = () => {
     const data = await res.json();
 
     setTopMovies(data.results);
+    console.log(topMovies);
   };
 
   useEffect(() => {
     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
-
+    console.log(topRatedURL);
     getTopRatedMovies(topRatedURL);
   }, []);
 
@@ -24,26 +25,15 @@ const Home = () => {
     <div className="filmsContainer">
       <h2>Filmes melhores avaliados...</h2>
       <div className="filmDiv">
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
-        <FilmCard />
+        {topMovies.lenght === 0 && <p>Carregando...</p>}
+        {topMovies &&
+          topMovies.map((movie) => (
+            <FilmCard
+              title={movie.title}
+              image={movie.poster_path}
+              score={movie.vote_average}
+            />
+          ))}
       </div>
     </div>
   );

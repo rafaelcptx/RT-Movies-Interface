@@ -4,3 +4,21 @@
   background-color: black;
   margin: 40px 20px;
 }
+
+.filmTitle {
+  color: white;
+}
+
+.filmCardPhoto {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.filmImage {
+  width: 160px;
+}
+
+.filmScore {
+  color: #ffc700;
+}
