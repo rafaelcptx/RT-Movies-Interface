@@ -5,6 +5,19 @@
   font-weight: 600;
 }
 
+body {
+  background-color: #161616;
+}
+
+.filmsContainer {
+  padding: 35px 30px;
+}
+
+.filmsContainer h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: Rubik;
   src: url(../assets/Rubik-Regular.ttf);
@@ -68,10 +81,16 @@ a:active {
   margin-left: 8px;
 }
 
+.filmDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 750px) {
   .navDiv {
     flex-direction: column;
-    padding: 15px;
+    padding: 23px 15px;
   }
 
   #searchBar {

@@ -10,11 +10,6 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
-      <h1>
-        <Link to="/movies/:id">Movies</Link>
-        <br></br>
-        <Link to="/search">Search</Link>
-      </h1>
       <Outlet />
     </div>
   );
