@@ -7,9 +7,9 @@ const NavBar = () => {
       <form id="buscar">
         <div id="searchDiv">
           <input id="searchBar" type="text" placeholder="Digite um filme..." />
-          <div id="button">
+          <button id="button">
             <img src="../assets/lupa.png" alt="lupa" id="lupa" />
-          </div>
+          </button>
         </div>
       </form>
       <form id="filtrar">

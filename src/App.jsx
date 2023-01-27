@@ -11,8 +11,6 @@ function App() {
       <Header />
       <NavBar />
       <h1>
-        <Link to="/">Home</Link>
-        <br></br>
         <Link to="/movies/:id">Movies</Link>
         <br></br>
         <Link to="/search">Search</Link>
