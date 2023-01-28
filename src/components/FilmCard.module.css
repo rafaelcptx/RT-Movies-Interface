@@ -22,3 +22,17 @@
 .filmScore {
   color: #ffc700;
 }
+
+.filmCardTitle,
+.filmCardScore {
+  width: 100%;
+  background-color: #61000c;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.filmCardScore {
+  margin-top: 10px;
+  background-color: transparent;
+}
