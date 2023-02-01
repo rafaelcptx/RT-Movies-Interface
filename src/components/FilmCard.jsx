@@ -1,4 +1,5 @@
 import style from "./FilmCard.module.css";
+import { Link } from "react-router-dom";
 
 const FilmCard = (props) => {
   const imageURL = import.meta.env.VITE_IMG;
@@ -6,18 +7,19 @@ const FilmCard = (props) => {
 
   return (
     <div className={style.filmCardDiv}>
-      <div className={style.filmCardPhoto}>
-        <img className={style.filmImage} src={image} alt="poster do filme" />
-      </div>
-      <div className={style.filmCardContent}>
-        <div className={style.filmCardTitle}>
-          <p className={style.filmTitle}>{props.title}</p>
+      <Link>
+        <div className={style.filmCardPhoto}>
+          <img className={style.filmImage} src={image} alt="poster do filme" />
         </div>
-        <div className={style.filmCardScore}>
-          <p className={style.filmScore}>Nota: {props.score}</p>
+        <div className={style.filmCardContent}>
+          <div className={style.filmCardTitle}>
+            <p className={style.filmTitle}>{props.title}</p>
+          </div>
+          <div className={style.filmCardScore}>
+            <p className={style.filmScore}>Nota: {props.score}</p>
+          </div>
         </div>
-        <p className={style.filmGender}></p>
-      </div>
+      </Link>
     </div>
   );
 };

@@ -1,18 +1,20 @@
 .filmCardDiv {
   width: 200px;
-  height: 410px;
+  height: auto;
   background-color: black;
   margin: 40px 20px;
 }
 
 .filmTitle {
   color: white;
+  text-align: center;
 }
 
 .filmCardPhoto {
   width: 100%;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .filmImage {
@@ -21,6 +23,7 @@
 
 .filmScore {
   color: #ffc700;
+  text-align: center;
 }
 
 .filmCardTitle,
@@ -29,10 +32,8 @@
   background-color: #61000c;
   padding: 10px 20px;
   box-sizing: border-box;
-  margin-top: 15px;
 }
 
 .filmCardScore {
-  margin-top: 10px;
   background-color: transparent;
 }

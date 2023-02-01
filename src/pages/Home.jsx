@@ -11,15 +11,26 @@ const Home = () => {
     const res = await fetch(url);
     const data = await res.json();
 
+    console.log(data);
     setTopMovies(data.results);
-    console.log(topMovies);
   };
 
   useEffect(() => {
     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
-    console.log(topRatedURL);
     getTopRatedMovies(topRatedURL);
   }, []);
+
+  /*
+  const getGenres = async () => {
+    const res = await fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?${apiKey}`
+    );
+    const data = await res.json();
+    return data;
+  };
+
+  let genres = getGenres();
+*/
 
   return (
     <div className="filmsContainer">
@@ -27,8 +38,9 @@ const Home = () => {
       <div className="filmDiv">
         {topMovies.lenght === 0 && <p>Carregando...</p>}
         {topMovies &&
-          topMovies.map((movie) => (
+          topMovies.map((movie, index) => (
             <FilmCard
+              key={index}
               title={movie.title}
               image={movie.poster_path}
               score={movie.vote_average}
